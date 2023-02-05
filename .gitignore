@@ -17,3 +17,6 @@ build/
 venv/
 *.egg-link
 .vercel
+
+#node-modules
+/node_modules
