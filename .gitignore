@@ -16,3 +16,4 @@ build/
 # Installed packages
 venv/
 *.egg-link
+.vercel
