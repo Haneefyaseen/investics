@@ -120,3 +120,6 @@ def stock():
     stock.index = np.asarray(year)
     return render_template('stockprice.html', sdata=dff.to_html(classes='table table-bordered'),pred=pred.transpose().to_html(classes='table table-bordered'),
     stock=stock.transpose().to_html(classes='table table-bordered'), price_data = p_data.transpose().to_html(classes='table table-bordered'))
+
+if __name__ == '__main__':
+    app.run(host="0.0.0.0", port=5000)
