@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Tool</title>
+<style>
+    .row:last-of-type {
+        margin-bottom: 200px;
+    }
+</style>
+{% endblock %}
+
+{% block home %}
+<div class="container-fluid est-page responsive">
+    <div class="row">
+        <h1 class="col-sm-6 text-center">INVESTIMATOR</h1>
+    </div>
+    <div class="row">
+        <h2 class="col-sm-6 text-center">A Stock Forecasting Tool</h2>
+    </div>
+    <div class="row">
+        <p class="col-sm-6">If you are a first time user, please check out the points to remember before using Investimator</p>
+    </div>
+    <div class="row">
+        <button type="button" class="btn btn-light btn-lg col-sm-pull-6" data-toggle="modal" data-target="#myModal">
+            POINTS TO REMEMBER <i class="bi bi-arrow-right-circle-fill"></i></button>
+    </div>
+    <div class="row">
+        <div id="myModal" class="modal fade col-sm-12" role="dialog">
+            <div class="modal-dialog">
+    
+                <!-- Modal content-->
+                <div class="modal-content est-modal" style="background-color: black;">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"  style="color: azure;"><i class="bi bi-x-circle"></i></button>
+                        <h4 class="modal-title">POINTS TO REMEMBER</h4>
+                    </div>
+                    <div class="modal-body">
+                        <h3>Description:</h3>
+                        <p>Investimator is a tool that estimates the price of a stock for five years based on the company’s financial forecast.</p>
+                        <h3>Follow the Instructions on how to use for the ease of usage.</h3>
+                        <ul>
+                            <li>As of now, Investimator forecast is only available for stocks that are listed for five full financial years.</li>
+                            <li>Investimator might show wrong forecast for cyclical stocks (metals, sugar, chemical or textile stocks) because of it’s uncertainty in earnings.</li>
+                            <li>The forecast price calculated by the tool may or may not be achieved by the end of a specific year but can be achieved in subsequent years.</li>
+                            <li>“Investimator” estimates a stock price based only on data analysis. The forecast price estimated by the tool should not be taken as an Investment advice.</li>
+                            <li>Any buy or sell decision based on the output of the tool must not be pursued by an individual or entity without prior consultation with a financial professional.</li>
+                            <li>If you had understood the above points, Just get ready and use our tool with ease.</li>
+                        </ul>
+                        <p>If you have any queries, drop a mail to info@investics.in or Tag us on twitter either @investics_ or @santhosh1861999</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="row">
+        <p class="col-sm-6">Use our tool and get to know where your stock price is heading in the next five years.</p>
+    </div>
+    <div class="row">
+        <a href="/sheet"><button class="btn btn-light btn-lg col-sm-12">INVESTIMATOR <i class="bi bi-arrow-right-square-fill"></i></button></a>
+    </div>
+</div>
+{% endblock %}

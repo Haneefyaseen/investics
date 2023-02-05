@@ -1,0 +1,236 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Table</title>
+{% endblock %}
+
+{% block home %}
+<div class="container-fluid responsive table-page">
+    <div class="row">
+        <div class="col-sm-12">
+            <button type="button" class="btn btn-link btn-lg" data-toggle="modal" data-target="#myModal">
+                How to use?</button>
+
+            <!-- Modal -->
+            <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content" style="background-color: black;">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" style="color: azure;"><i
+                                    class="bi bi-x-circle"></i></button>
+                            <h4 class="modal-title">How to use "Investimator"</h4>
+                        </div>
+                        <div class="modal-body">
+                            <ol class="text-justify">
+                                <li>Choose the stock you want to forecast from the drop-down menu.</li>
+                                <li>Financial data of previous six years for the stock you’ve chosen will appear.</li>
+                                <li>Scroll down and choose the number of years of forecasting you want.</li>
+                                <li>Click “FORECAST THE FINANCIALS” button. The financial estimate for the number of
+                                    years you’ve chosen will appear.</li>
+                                <li>Click “FORECAST THE STOCK PRICE” button. The estimated stock price for the next
+                                    years will appear.</li>
+                            </ol>
+                            <span class="fw-bold">Note:</span>
+                            <ul>
+                                <li>If you are forecasting for a negative PE companies or companies with high
+                                    uncertainty in profits, It is better to use “Price based on PR”.</li>
+                                <li>If you are forecasting for banking or finance stocks, It is better to use “Price
+                                    based on PB”.</li>
+                            </ul>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal" style="margin-bottom: 10px;">Close</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <form action="/sheet" method="post" class="form-control main" style="margin-top: 80px;">
+        <label for="">Choose from the list of stocks</label>
+        <select name="range" id="" class="form form-select-sm" required>
+            <option value="">Select one...</option>
+            <option value="ADANIENT">ADANIENT</option>
+            <option value="ADANIPORTS">ADANIPORTS</option>
+            <option value="APOLLOHOSP">APOLLOHOSP</option>
+            <option value="ASIANPAINT">ASIANPAINT</option>
+            <option value="AXISBANK">AXISBANK</option>
+            <option value="BAJAJ_AUTO">BAJAJ AUTO</option>
+            <option value="BAJAJFINSERV">BAJAJFINSERV</option>
+            <option value="BAJFINANCE">BAJFINANCE</option>
+            <option value="BHARTIARTL">BHARTIARTL</option>
+            <option value="BPCL">BPCL</option>
+            <option value="BRITANNIA">BRITANNIA</option>
+            <option value="CIPLA">CIPLA</option>
+            <option value="COALINDIA">COALINDIA</option>
+            <option value="DIVISLAB">DIVISLAB</option>
+            <option value="DRREDDY">DRREDDY</option>
+            <option value="EICHERMOT">EICHERMOT</option>
+            <option value="GRASIM">GRASIM</option>
+            <option value="HCLTECH">HCLTECH</option>
+            <option value="HDFC">HDFC</option>
+            <option value="HDFCBANK">HDFCBANK</option>
+            <option value="HEROMOTO">HEROMOTO</option>
+            <option value="HINDALCO">HINDALCO</option>
+            <option value="HINDUNILVR">HINDUNILVR</option>
+            <option value="ICICIBANK">ICICIBANK</option>
+            <option value="INDUSINDBK">INDUSINDBK</option>
+            <option value="INFY">INFY</option>
+            <option value="ITC">ITC</option>
+            <option value="JSWSTEEL">JSWSTEEL</option>
+            <option value="KOTAKBANK">KOTAKBANK</option>
+            <option value="LT">LT</option>
+            <option value="M_M">M_M</option>
+            <option value="MARUTI">MARUTI</option>
+            <option value="NTPC">NTPC</option>
+            <option value="ONGC">ONGC</option>
+            <option value="POWERGRID">POWERGRID</option>
+            <option value="RELIANCE">RELIANCE</option>
+            <option value="SBIN">SBIN</option>
+            <option value="SUNPHARMA">SUNPHARMA</option>
+            <option value="TATACONS">TATACONS</option>
+            <option value="TATAMOTORS">TATAMOTORS</option>
+            <option value="TATASTEEL">TATASTEEL</option>
+            <option value="TCS">TCS</option>
+            <option value="TECHM">TECHM</option>
+            <option value="TITAN">TITAN</option>
+            <option value="ULTRACEMCO">ULTRACEMCO</option>
+            <option value="UPL">UPL</option>
+            <option value="WIPRO">WIPRO</option>
+        </select>
+        <button type='submit' class="btn btn-primary" class="forecast">Get Stock Data</button>
+    </form>
+    <div class="table table-responsive table-active">
+        {{sdata | safe}}
+    </div>
+    <hr/>
+    <form action="/forecast" method="post" class="form-control form-forecast">
+        <label for="">Choose a stock for forecasting</label>
+        <select name="stock" id="" class="form form-select-sm" required>
+            <option value="">Select one...</option>
+            <option value="ADANIENT">ADANIENT</option>
+            <option value="ADANIPORTS">ADANIPORTS</option>
+            <option value="APOLLOHOSP">APOLLOHOSP</option>
+            <option value="ASIANPAINT">ASIANPAINT</option>
+            <option value="AXISBANK">AXISBANK</option>
+            <option value="BAJAJ_AUTO">BAJAJ AUTO</option>
+            <option value="BAJAJFINSERV">BAJAJFINSERV</option>
+            <option value="BAJFINANCE">BAJFINANCE</option>
+            <option value="BHARTIARTL">BHARTIARTL</option>
+            <option value="BPCL">BPCL</option>
+            <option value="BRITANNIA">BRITANNIA</option>
+            <option value="CIPLA">CIPLA</option>
+            <option value="COALINDIA">COALINDIA</option>
+            <option value="DIVISLAB">DIVISLAB</option>
+            <option value="DRREDDY">DRREDDY</option>
+            <option value="EICHERMOT">EICHERMOT</option>
+            <option value="GRASIM">GRASIM</option>
+            <option value="HCLTECH">HCLTECH</option>
+            <option value="HDFC">HDFC</option>
+            <option value="HDFCBANK">HDFCBANK</option>
+            <option value="HEROMOTO">HEROMOTO</option>
+            <option value="HINDALCO">HINDALCO</option>
+            <option value="HINDUNILVR">HINDUNILVR</option>
+            <option value="ICICIBANK">ICICIBANK</option>
+            <option value="INDUSINDBK">INDUSINDBK</option>
+            <option value="INFY">INFY</option>
+            <option value="ITC">ITC</option>
+            <option value="JSWSTEEL">JSWSTEEL</option>
+            <option value="KOTAKBANK">KOTAKBANK</option>
+            <option value="LT">LT</option>
+            <option value="M_M">M_M</option>
+            <option value="MARUTI">MARUTI</option>
+            <option value="NTPC">NTPC</option>
+            <option value="ONGC">ONGC</option>
+            <option value="POWERGRID">POWERGRID</option>
+            <option value="RELIANCE">RELIANCE</option>
+            <option value="SBIN">SBIN</option>
+            <option value="SUNPHARMA">SUNPHARMA</option>
+            <option value="TATACONS">TATACONS</option>
+            <option value="TATAMOTORS">TATAMOTORS</option>
+            <option value="TATASTEEL">TATASTEEL</option>
+            <option value="TCS">TCS</option>
+            <option value="TECHM">TECHM</option>
+            <option value="TITAN">TITAN</option>
+            <option value="ULTRACEMCO">ULTRACEMCO</option>
+            <option value="UPL">UPL</option>
+            <option value="WIPRO">WIPRO</option>
+        </select>
+        <label for="">Choose the number of years for forecasting</label>
+        <select class="form-select-sm" name="t-range">Please select the range for forecast:
+            <option value="3">Select one....</option>
+            <option value=3>3</option>
+            <option value=4>4</option>
+            <option value=5>5</option>
+        </select>
+        <button type='submit' class="btn btn-primary" class="forecast">Forecast the Financials</button>
+    </form>
+    {% block forecast %}{% endblock %}
+    <hr/>
+    <form action="/sp" method="post" class="form-control">
+        <label for="">Choose a stock for stock price forecast</label>
+        <select name="stock" id="" class="form form-select-sm" required>
+            <option value="">Select one...</option>
+            <option value="ADANIENT">ADANIENT</option>
+            <option value="ADANIPORTS">ADANIPORTS</option>
+            <option value="APOLLOHOSP">APOLLOHOSP</option>
+            <option value="ASIANPAINT">ASIANPAINT</option>
+            <option value="AXISBANK">AXISBANK</option>
+            <option value="BAJAJ_AUTO">BAJAJ AUTO</option>
+            <option value="BAJAJFINSERV">BAJAJFINSERV</option>
+            <option value="BAJFINANCE">BAJFINANCE</option>
+            <option value="BHARTIARTL">BHARTIARTL</option>
+            <option value="BPCL">BPCL</option>
+            <option value="BRITANNIA">BRITANNIA</option>
+            <option value="CIPLA">CIPLA</option>
+            <option value="COALINDIA">COALINDIA</option>
+            <option value="DIVISLAB">DIVISLAB</option>
+            <option value="DRREDDY">DRREDDY</option>
+            <option value="EICHERMOT">EICHERMOT</option>
+            <option value="GRASIM">GRASIM</option>
+            <option value="HCLTECH">HCLTECH</option>
+            <option value="HDFC">HDFC</option>
+            <option value="HDFCBANK">HDFCBANK</option>
+            <option value="HEROMOTO">HEROMOTO</option>
+            <option value="HINDALCO">HINDALCO</option>
+            <option value="HINDUNILVR">HINDUNILVR</option>
+            <option value="ICICIBANK">ICICIBANK</option>
+            <option value="INDUSINDBK">INDUSINDBK</option>
+            <option value="INFY">INFY</option>
+            <option value="ITC">ITC</option>
+            <option value="JSWSTEEL">JSWSTEEL</option>
+            <option value="KOTAKBANK">KOTAKBANK</option>
+            <option value="LT">LT</option>
+            <option value="M_M">M_M</option>
+            <option value="MARUTI">MARUTI</option>
+            <option value="NTPC">NTPC</option>
+            <option value="ONGC">ONGC</option>
+            <option value="POWERGRID">POWERGRID</option>
+            <option value="RELIANCE">RELIANCE</option>
+            <option value="SBIN">SBIN</option>
+            <option value="SUNPHARMA">SUNPHARMA</option>
+            <option value="TATACONS">TATACONS</option>
+            <option value="TATAMOTORS">TATAMOTORS</option>
+            <option value="TATASTEEL">TATASTEEL</option>
+            <option value="TCS">TCS</option>
+            <option value="TECHM">TECHM</option>
+            <option value="TITAN">TITAN</option>
+            <option value="ULTRACEMCO">ULTRACEMCO</option>
+            <option value="UPL">UPL</option>
+            <option value="WIPRO">WIPRO</option>
+        </select>
+        <label for="">Choose the number of years for forecasting</label>
+        <select class="form-select-sm" name="t-range">Please select the range for forecast:
+            <option value="3">Select one....</option>
+            <option value=3>3</option>
+            <option value=4>4</option>
+            <option value=5>5</option>
+        </select>
+        <button type='submit' class="btn btn-primary" class="forecast">Forecast the Stock Price</button>
+    </form>
+    {% block sp %}{% endblock %}
+</div>
+{% endblock %}

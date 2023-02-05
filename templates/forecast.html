@@ -1,0 +1,8 @@
+{% extends 'table.html' %}
+
+{% block forecast %}
+    <div class="table table-responsive forecast">
+        {{pred | safe}}
+        {{price_data | safe}}
+    </div>
+{% endblock %}

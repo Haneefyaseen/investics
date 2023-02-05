@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Home</title>
+{% endblock %}
+
+{% block home %}
+<div class="container-fluid home-page responsive">
+    <div class="row">
+        <div class="col-sm-6">
+            <h1>Predict the future <br />Move of your stock</h1>
+        </div>
+        <div class="col-sm-6">
+            <img src="https://i.pinimg.com/736x/d3/f4/1b/d3f41be339f89c1fb7bdad9d33a6fc81.jpg" alt="">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <p>Struggling to find the right price of the stock?<br />Shut down the worry. Use our Investimator!</p>
+        </div>
+        <div class="col-sm-6 hint">BUY/SELL AT A RIGHT PLACE<br /><span>Know the right value of stock before
+                investing.</span></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">
+                GO TO INVESTIMATOR <i class="bi bi-arrow-right-circle-fill"></i></button>
+
+            <!-- Modal -->
+            <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content" style="background-color: black;">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"  style="color: azure;"><i class="bi bi-x-circle"></i></button>
+                            <h4 class="modal-title">DISCLAIMER</h4>
+                        </div>
+                        <div class="modal-body">
+                            <ul>
+                                <li>We provide tools that are useful for Stock Market Investing.</li>
+                                <li>Although the data contained on the website namely investics.in and the content on
+                                    our social media pages are based on information from public sources that we believe
+                                    to be reliable. We make no representation or warranty as to the accuracy,
+                                    timeliness, completeness of the information contained therein, and expressly
+                                    disclaim any liability in this regard. We also make no warranty that the information
+                                    contained on our platform/social media will meet your requirements.</li>
+                                <li>The data and content on this platform/social media pages is made available for
+                                    general information and educational purposes only and is not intended to constitute
+                                    legal and/or investment advice. Nothing
+                                    contained on our platform/social media pages should be understood as constituting a
+                                    solicitation, recommendation or endorsement of any particular security or other
+                                    financial instruments and/or to engage in any investment strategy presented on our
+                                    platform and/or Social media pages and we provide no guarantee of specific outcomes
+                                    of any investment strategy. The information, opinions and views contained on our
+                                    platform/social media pages have not been tailored to the investment objectives of
+                                    any one individual. We do not have any obligation to provide revised
+                                    information/opinion in the event of changed circumstances. No reliance must be
+                                    placed on fairness, accuracy, completeness or correctness of any information and
+                                    materials contained on our Platform/Social media pages.</li>
+                                <li>We, the persons associated with us (investics.in) are not an Investment advisor
+                                    registered with any government authority including Securities Exchange board of
+                                    India. The outcome of our tools and ideas or strategies discussed on our
+                                    platform/social media pages must not be pursued as Investment advice by any
+                                    individual or entity, without prior consultation with a finance professional or
+                                    independent research, for the purpose of assessing whether our opinions are suitable
+                                    to you based on your own financial requirements. Please note that there are risks
+                                    associated with investing in securities and involves risk of loss. Past performance
+                                    of any individual and/or entity is not a guide to future performance.</li>
+                                <li>By using our tools in our platform and social media pages, You assume full
+                                    responsibility for all liabilities and losses, financial, emotional or otherwise
+                                    suffered or incurred by you.</li>
+                            </ul>
+                            <a href="/estimate"><button class="btn btn-warning">Proceed <i class="bi bi-arrow-right"></i></button></a>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 hint">
+            RIDE THE TREND<br /><span>Get to know the estimate of a company's earnings and ride the trend
+                confidently.</span>
+        </div>
+    </div>
+</div>
+{% endblock %}

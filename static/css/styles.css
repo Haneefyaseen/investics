@@ -1,0 +1,420 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(to bottom, #268083, #a4136fa3);
+    mix-blend-mode: hard-light;
+    background-repeat: no-repeat;
+}
+
+/* Home Page start */
+
+.home-page {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: stretch;
+    color: white;
+    height: fit-content;
+}
+
+.home-page h1 {
+    font-size: 5.6em;
+    font-weight: bolder;
+}
+
+.home-page p {
+    font-size: 2em;
+}
+
+.home-page button {
+    color: blue;
+    padding: 18px;
+}
+
+.home-page img {
+    width: 400px;
+}
+
+.home-page .row {
+    margin: 30px;
+}
+
+.home-page .row:last-of-type {
+    margin-bottom: 43px;
+}
+
+.home-page .hint {
+    color: #d5d88e;
+    font-size: 1.9em;
+}
+
+.home-page .hint span {
+    color: white;
+    font-weight: bold;
+}
+
+/* Home Page end */
+
+/* About Page Start */
+
+.about {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.about h1 {
+    font-weight: bold;
+}
+
+.main-about {
+    color: #edf5e1;
+}
+
+.about p {
+    font-size: 2em;
+    margin-top: 100px;
+}
+
+.about img {
+    width: 500px;
+    margin-left: 100px;
+    margin-bottom: 46px;
+}
+/* About page end */
+
+/* Contact page start */
+
+.contact {
+    color: white;
+}
+
+.contact h1 {
+    color: #edf5e1;
+}
+
+.contact h1, .contact h2{
+    font-weight: bold;
+}
+
+.contact .card-deck {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 50px 0 106px 0;
+}
+
+.contact .card-deck .card {
+    border: 1px solid white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.contact .card-deck .card-body {
+    font-size: 1.3em;
+} 
+
+.contact .card .mail, .contact .card .twitter {
+    font-size: 10em;
+    color: black;
+}
+
+/* Contact Page end */
+
+/* Modal styles start */
+
+.modal-title {
+    color: palevioletred;
+    font-weight: bolder;
+    font-size: 28px;
+}
+
+.modal-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-body ul li {
+    margin-bottom: 10px;
+    list-style-type: square;
+}
+
+/* Modal styles end */
+
+/* Investimator styles start */
+
+.est-page {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    padding: 10px;
+    font-weight: bolder;
+}
+
+.est-page h1 {
+    font-size: 6.1em;
+    font-weight: bold;
+    color: #edf5e1;
+}
+
+.est-page h2 {
+    font-size: 3.6em;
+    font-weight: bold;
+    width: 100%;
+}
+
+.est-page p {
+    font-size: 2.1em;
+    margin: 20px;
+    width: fit-content;
+}
+
+.est-page button {
+    color: black;
+}
+
+.est-modal {
+    margin: -10px;
+}
+
+.est-modal p {
+    font-size: 1.5em;
+}
+
+/* Investimator styles end */
+
+/* Table styles start */
+
+table {
+    color: white;
+}
+
+table tbody {
+    background-color: #659dbd;
+}
+
+.table-active thead {
+    display: none;
+}
+
+.table-active tbody {
+    text-align: center;
+}
+
+.table-active tbody tr:first-of-type, .forecast thead, .stock thead{
+    background-color: black;
+}
+
+.table-active tr:nth-child(4) {
+    background-color: #db9560;
+}
+
+.table-active tr:nth-child(6) {
+    background-color: #db9560;
+}
+
+.table-active tr:nth-child(10) {
+    background-color: #db9560;
+}
+
+.table-active tr:nth-child(12) {
+    background-color: #db9560;
+}
+
+.instructions {
+    font-weight: bold;
+    color: #82EB80;
+    font-size: 1.4em;
+}
+
+/* Table styles end */
+
+/* Form styling */
+
+.table-page {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+
+.table-page button {
+    margin-bottom: -50px;
+}
+
+.table-page .modal-body {
+    color: white;
+    font-weight: bold;
+}
+
+.table-page .modal-body li {
+    margin-bottom: 10px;
+}
+
+.table-page .btn-lg {
+    color: #82eb80;
+    width: fit-content;
+    float: right;
+}
+
+.table-page .btn-lg:hover {
+    color: #82eb80;
+    text-decoration: none;
+    background-color: black;
+}
+
+.table-page form {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    background-color: transparent;
+    padding: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.table-page form button {
+    margin-bottom: 0px;
+    margin-left: 15px;
+}
+
+.table-page label {
+    font-weight: bold;
+    color: white;
+    margin-right: 15px;
+    margin-left: 15px;
+    font-size: 1.5em;
+}
+
+.table-page select {
+    padding: 10px;
+    border-radius: 8px;
+}
+
+
+/* Media queries */
+
+@media only screen and (max-width: 600px) {
+    .home-page {
+        width: 100%;
+        font-size: 0.6em;
+    }
+
+    .home-page img {
+        width: 200px;
+    }
+
+    .home-page .modal-body {
+        font-size: 1.7em;
+    }
+
+    .est-page {
+        font-size: .5em;
+        height: fit-content;
+        background-repeat: no-repeat;
+        width: fit-content;
+        padding: 10px;
+    }
+    .est-page p {
+        width: 250px;
+    }
+
+    .est-modal {
+        font-size: 1.8em;
+    }
+
+    .table-active {
+        margin-bottom: 100px;
+        margin-top: -30px;
+    }
+
+    .forecast {
+        margin-bottom: 100px;
+        margin-top: -110px;
+    }
+
+    .table-page {
+        height: fit-content;
+    }
+
+    .table-page .form-forecast {
+        margin-bottom: 150px;
+    }
+
+    .table-page form {
+        display: flex;
+        flex-direction: column;
+        font-size: 0.7em;
+        border: none;
+    }
+
+    .table-page form[class='form-control main'] label {
+        margin-top: -120px;
+    }
+
+    .table-page button:last-of-type {
+        margin-bottom: 100px;
+    }
+
+    hr {
+        margin-bottom: 150px;
+        margin-top: -50px;
+    }
+
+    .about img {
+        width: 250px;
+        margin-left: 10px;
+    }
+
+    .contact .card-deck {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact .card-deck .mail, .contact .card-deck .twitter {
+        font-size: 5em;
+    }
+
+    .contact .card-deck .card {
+        width: 350px;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 912px) {
+    .table-page form {
+        font-size: 0.6em;
+    }
+
+    .home-page .modal-body {
+        font-size: large;
+        margin: 10px;
+    }
+
+    .home-page img {
+        width: 350px;
+    }
+
+    .about img {
+        width: 250px;
+        margin-top: 100px;
+    }
+
+    .table-page .modal-body {
+        font-size: x-large;
+        margin: 20px;
+    }
+}
